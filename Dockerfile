@@ -13,6 +13,6 @@ RUN chmod +x ./entrypoint.sh
 EXPOSE 3128
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["-NCd", "1", "-f", "/squid/config/squid.conf" ]
+CMD ["-NCd", "1", "-f", "/etc/squid/squid.conf" ]
 
 USER squid
