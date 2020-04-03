@@ -8,7 +8,9 @@ COPY entrypoint.sh /entrypoint.sh
 COPY squid.conf /etc/squid/
 COPY sites.whitelist.txt /etc/squid/
 
-RUN chmod +x ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh && \
+    chown squid ./entrypoint.sh && \
+    chown -R squid /etc/squid
 
 EXPOSE 3128
 
